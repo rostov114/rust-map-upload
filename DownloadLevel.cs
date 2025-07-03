@@ -28,11 +28,8 @@ namespace Oxide.Plugins
 		private void Init()
 		{
 			_instance = this;
-		}
 
-		private void Init()
-		{
-			reqHeaders.Add("X-SERVER-IP", Network.Net.sv.ip);
+   			reqHeaders.Add("X-SERVER-IP", Network.Net.sv.ip);
 			reqHeaders.Add("X-SERVER-PORT", Network.Net.sv.port.ToString());
 			reqHeaders.Add("X-SERVER-ID", (!string.IsNullOrWhiteSpace(ConVar.App.serverid) ? ConVar.App.serverid : ""));
 		}
